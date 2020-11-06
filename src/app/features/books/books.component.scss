@@ -1,13 +1,17 @@
 .container {
   text-align: center;
-  margin-top: 10%;
+  width: 90%;
+  margin: 10vh auto 0;
 
   .title {
     font-size: 3rem;
+    line-height: 1.2;
   }
 
-  .search-field {
-    width: 80%;
-    max-width: 300px;
+  .wishlist {
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 20px;
   }
 }

@@ -1,24 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
-  nameFormControl = new FormControl('', [
-    Validators.required,
-  ]);
-
-  constructor() { }
-
-  ngOnInit(): void {
-
-  }
-
-
-
-
-
+export class HomeComponent {
+  constructor() {}
 }

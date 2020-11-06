@@ -1,1 +1,22 @@
-<p>welcome-form works!</p>
+<form>
+  <mat-form-field class="welcome-form">
+    <mat-label>What's your name?</mat-label>
+    <input matInput
+           [formControl]="nameFormControl"
+           placeholder="Ex. Eliran Eliassy">
+    <mat-error *ngIf="nameFormControl.hasError('required')">
+      Name is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="nameFormControl.hasError('minlength')">
+      Name is too short, length should be at least 3 characters
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button
+          [disabled]="!nameFormControl.valid"
+          (click)="submitName()"
+          color="primary"
+          class="go-btn">
+    Go
+  </button>
+</form>

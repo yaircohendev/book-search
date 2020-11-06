@@ -1,1 +1,29 @@
-<p>book-dialog works!</p>
+<div class="container" *ngIf="data.book; let book">
+  <h1 mat-dialog-title>{{book.title}}</h1>
+  <h3 *ngIf="book.subtitle">{{book.subtitle}}</h3>
+
+
+  <div class="authors" *ngIf="book.authors">
+    <span>By&nbsp;</span>
+    <div *ngFor="let author of book.authors; index as i"
+         class="book-author">
+      <span>{{author}}</span>
+      <span *ngIf="book.authors.length > 1 && i < book.authors.length - 1">,&nbsp;</span>
+    </div>
+  </div>
+  <span class="published">Published in {{book.publishedDate}}</span>
+  <span class="pages">{{book.pageCount}} pages</span>
+  <img [src]="book.imageLinks.thumbnail"
+       alt="book"
+       *ngIf="book.imageLinks"
+       class="book-img"/>
+
+
+  <div mat-dialog-actions class="actions-btns">
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button cdkFocusInitial (click)="addToWishList()">
+      <mat-icon>favorite</mat-icon>
+      <span class="add-to-wishlist">Add To Wishlist</span>
+    </button>
+  </div>
+</div>

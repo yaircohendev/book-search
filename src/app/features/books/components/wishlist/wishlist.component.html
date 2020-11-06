@@ -1,1 +1,18 @@
-<mat-icon>favorite</mat-icon>
+<div class="wishlist">
+  <mat-icon [matMenuTriggerFor]="menu" class="icon">favorite</mat-icon>
+  <mat-menu #menu="matMenu">
+    <div *ngIf="wishList.length; else noData">
+      <div class="book" *ngFor="let book of wishList">
+        <span>{{book.title}}</span>
+        <mat-icon class="clear-icon" (click)="$event.stopPropagation(); deleteFromWishList.emit(book.title)">
+          clear
+        </mat-icon>
+      </div>
+    </div>
+    <ng-template #noData>
+      <div class="no-data">
+        No books in wishlist
+      </div>
+    </ng-template>
+  </mat-menu>
+</div>

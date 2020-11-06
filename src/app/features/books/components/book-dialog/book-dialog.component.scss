@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    margin-bottom: unset;
+  }
+
+  .authors {
+    display: flex;
+  }
+
+  .authors span {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .published {
+    margin: 5px 0;
+  }
+
+  .book-img {
+    width: 50%;
+    margin-top: 10px;
+  }
+
+  .add-to-wishlist {
+    margin-top: 2px;
+    margin-left: 7px;
+  }
+
+  .actions-btns {
+    justify-content: center;
+  }
+}
+

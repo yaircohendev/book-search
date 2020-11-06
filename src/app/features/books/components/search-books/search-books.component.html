@@ -1,1 +1,8 @@
-<p>search-books works!</p>
+<mat-form-field class="search-field">
+  <mat-icon matPrefix class="search-icon">search</mat-icon>
+  <input matInput
+         type="search"
+         placeholder="Book name"
+         (input)="searchBook.emit($event.target.value)"
+         class="search-input">
+</mat-form-field>

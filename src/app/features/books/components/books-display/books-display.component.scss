@@ -1,0 +1,56 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .book {
+      display: flex;
+      border: 1px solid rgba(0,0,0, .2);
+      border-radius: 4px;
+      padding: 6px;
+      flex-direction: column;
+      max-width: 120px;
+      width: 90%;
+      height: 260px;
+      margin: 6px;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);
+      background-color: #fff;
+      cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+        box-shadow: 0 0 23px 0 rgba(54, 72, 150, 0.31);
+      }
+
+      .book-img {
+        width: 100%;
+        border-radius: 4px;
+        max-height: 200px;
+      }
+
+      .content {
+        margin-top: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        .book-title {
+          font-weight: bold;
+        }
+
+        .authors {
+          span {
+            color: rgba(0,0,0,.6);
+          }
+          .book-author {
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  }
+
+}
