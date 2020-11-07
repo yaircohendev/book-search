@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { BooksService } from '../../core/services/books.service';
 import { Observable } from 'rxjs';
 import { Book, BookData } from '../../core/models/books.model';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-books',

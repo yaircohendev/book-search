@@ -3,6 +3,6 @@
   <input matInput
          type="search"
          placeholder="Book name"
-         (input)="searchBook.emit($event.target.value)"
+         (input)="searchQuery$.next($event.target.value)"
          class="search-input">
 </mat-form-field>
